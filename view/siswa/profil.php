@@ -60,8 +60,6 @@
 </head>
 
 <body class="bg-gray-50 dark:bg-gray-900 min-h-screen">
-
-<?php include "component/navbar-style.php"; ?>
 <?php include "component/navbar.php"; ?>
 
 <!-- MAIN CONTENT -->
@@ -78,10 +76,18 @@
 
                 <!-- Foto Profil -->
                 <div class="container-hover" onclick="triggerFileUpload()">
+                                        <?php 
+                    $avatar = $_SESSION['avatar'] ?? null;
+                    $nama_user = $_SESSION['nama'] ?? 'Pengguna';
+
+                    // Tentukan URL sumber gambar
+                    $image_source = (!empty($avatar) && file_exists('uploads/' . $avatar))
+                        ? 'uploads/' . $avatar
+                        : 'https://ui-avatars.com/api/?name=' . urlencode($nama_user) . '&background=4F46E5&color=fff&size=40'; 
+                    ?>
 
                     <img id="profileImagePreview" 
-                        src="<?= isset($_SESSION['avatar']) ? 'uploads/' . $_SESSION['avatar'] : 
-                            'https://ui-avatars.com/api/?name='.$_SESSION['nama'].'&background=4F46E5&color=fff'; ?>" 
+                        src="<?= $image_source; ?>" 
                         class="profile-image shadow">
 
                     <div class="overlay">

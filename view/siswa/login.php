@@ -4,71 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Terapkan font Quicksand ke seluruh body */
         body {
-            font-family: Arial, sans-serif;
-            background: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .login-box {
-            width: 330px;
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 0 12px rgba(0,0,0,0.1);
-        }
-        .login-box h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        input {
-            width: 90%;
-            padding: 12px;
-            margin-bottom: 12px;
-            border: 1px solid #aaa;
-            border-radius: 4px;
-        }
-        button {
-            width: 98%;
-            padding: 12px;
-            background: #007bff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background: #0056b3;
-        }
-        .footer-link {
-            text-align: center;
-            margin-top: 10px;
-        }
-        .footer-link a {
-            text-decoration: none;
-            color: #007bff;
+            font-family: 'Quicksand', sans-serif;
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
+<body class="min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center p-4"
+      style="background-image: url('public/login.jpg');">
+    <div class="absolute inset-0 backdrop-blur-sm bg-black/20"></div>
 
-    <div class="login-box">
-        <h2>Login</h2>
+    <div class="w-full max-w-sm bg-white p-8 rounded-xl shadow-lg transform transition-all hover:shadow-xl">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Masuk</h2>
 
         <form action="?action=login&method=login" method="POST">
-            <input type="text" name="username" placeholder="Masukkan Username" required>
-            <input type="password" name="password" placeholder="Masukkan Password" required>
-
-            <button type="submit">Masuk</button>
+            <div class="mb-4">
+                <input 
+                    type="text" 
+                    name="username" 
+                    placeholder="Masukkan Username" 
+                    required 
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 placeholder-gray-500 text-gray-700"
+                >
+            </div>
+            
+            <div class="mb-6">
+                <input 
+                    type="password" 
+                    name="password" 
+                    placeholder="Masukkan Password" 
+                    required 
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 placeholder-gray-500 text-gray-700"
+                >
+            </div>
+            <button 
+                type="submit" 
+                class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold text-lg hover:bg-blue-700 transition duration-300 ease-in-out shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-opacity-50"
+            >
+                Masuk
+            </button>
         </form>
 
-        <div class="footer-link">
-            <p>Belum punya akun? <a href="?action=register">Daftar Disini</a></p>
+        <div class="text-center mt-6 text-gray-600">
+            <p class="text-sm">Belum punya akun? 
+                <a href="?action=register" class="text-blue-600 hover:text-blue-700 font-medium transition duration-200 hover:underline">
+                    Daftar Disini
+                </a>
+            </p>
         </div>
     </div>
 

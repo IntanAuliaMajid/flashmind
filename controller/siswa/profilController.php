@@ -19,15 +19,32 @@ function update() {
     $nama = $_POST['nama_lengkap'];
     $username = $_POST['username'];
 
+    // Ambil data profil lama untuk mendapatkan foto lama
+    $profilLama = getProfileById($id);
+    $fotoLama = $profilLama['avatar'] ?? null;
+
     // Cek jika ada upload foto
     $foto = null;
     if (!empty($_FILES['foto']['name'])) {
+        // Hapus foto lama jika ada
+        if ($fotoLama && $fotoLama != '' && file_exists("uploads/" . $fotoLama)) {
+            if (unlink("uploads/" . $fotoLama)) {
+                // File berhasil dihapus
+                error_log("File lama berhasil dihapus: " . $fotoLama);
+            } else {
+                // Gagal menghapus file
+                error_log("Gagal menghapus file lama: " . $fotoLama);
+            }
+        }
+
         $namaFile = time() . "_" . $_FILES['foto']['name'];
         $tmp = $_FILES['foto']['tmp_name'];
 
-        move_uploaded_file($tmp, "uploads/" . $namaFile);
-
-        $foto = $namaFile;
+        if (move_uploaded_file($tmp, "uploads/" . $namaFile)) {
+            $foto = $namaFile;
+        } else {
+            error_log("Gagal upload file baru: " . $namaFile);
+        }
     }
 
     // Update ke database lewat model

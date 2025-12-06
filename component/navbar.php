@@ -1,3 +1,8 @@
+<?php 
+    $active = $_GET['action'] ?? 'home';
+?>
+
+<?php include "component/navbar-style.php"; ?>
 <nav class="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700
             fixed top-0 left-0 w-full z-50 backdrop-blur">
             
@@ -7,9 +12,26 @@
             <!-- Logo -->
             <div class="flex items-center">
                 <img src="public/logo2.png" alt="" class="logo">
-                <a href="?action=dashboard" class="text-xl font-semibold text-gray-900 dark:text-gray-100 pl-4">
+                <a href="?action=home" class="text-xl font-semibold text-gray-900 dark:text-gray-100 pl-4">
                     Flashmind
                 </a>
+            </div>
+
+            <div class="flex items-center gap-5 text-gray-900 dark:text-gray-100 pl-4">
+                <a 
+                    href="?action=home" 
+                    class="<?php echo ($active == 'home') 
+                        ? 'border-b-2 border-blue-600 dark:border-indigo-400 font-semibold pb-1'
+                        : 'hover:text-blue-600 dark:hover:text-indigo-400 transition-colors';?>">Home</a>
+                <a href="" class="<?php echo ($active == 'kelompokKata') 
+                        ? 'border-b-2 border-blue-600 dark:border-indigo-400 font-semibold pb-1'
+                        : 'hover:text-blue-600 dark:hover:text-indigo-400 transition-colors';?>">Kelompok Kata</a>
+                <a href="" class="<?php echo ($active == 'kelompokKata') 
+                        ? 'border-b-2 border-blue-600 dark:border-indigo-400 font-semibold pb-1'
+                        : 'hover:text-blue-600 dark:hover:text-indigo-400 transition-colors';?>">Flashcard</a>
+                <a href="" class="<?php echo ($active == 'kelompokKata') 
+                        ? 'border-b-2 border-blue-600 dark:border-indigo-400 font-semibold pb-1'
+                        : 'hover:text-blue-600 dark:hover:text-indigo-400 transition-colors';?>">Quiz</a>
             </div>
 
             <!-- Right Menu -->
@@ -28,13 +50,22 @@
 
                 <!-- Foto Navbar -->
                 <div class="relative">
+                    <?php 
+                    $avatar = $_SESSION['avatar'] ?? null;
+                    $nama_user = $_SESSION['nama'] ?? 'Pengguna';
+
+                    // Tentukan URL sumber gambar
+                    $image_source = (!empty($avatar) && file_exists('uploads/' . $avatar))
+                        ? 'uploads/' . $avatar
+                        : 'https://ui-avatars.com/api/?name=' . urlencode($nama_user) . '&background=4F46E5&color=fff&size=40'; 
+                    ?>
+
                     <button onclick="toggleProfileMenu()"
                         class="flex items-center space-x-2 p-2 rounded-full 
-                               hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+                                hover:bg-gray-100 dark:hover:bg-gray-700 transition">
 
                         <img 
-                            src="<?= isset($_SESSION['avatar']) ? 'uploads/' . $_SESSION['avatar'] : 
-                                'https://ui-avatars.com/api/?name='.$_SESSION['nama'].'&background=4F46E5&color=fff'; ?>" 
+                            src="<?= $image_source ?>" 
                             class="nav-profile-image shadow"
                         >
                     </button>
@@ -63,3 +94,4 @@
         </div>
     </div>
 </nav>
+<?php include "component/navbar-script.php"; ?>
