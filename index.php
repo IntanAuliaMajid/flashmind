@@ -1,6 +1,7 @@
 <?php
 
 // ambil action (controller)
+
 $action = $_GET['action'] ?? 'login';
 
 // ambil method (fungsi dalam controller)
@@ -12,12 +13,16 @@ $routes = [
     'homeAdmin'       => 'controller/admin/dashboardController.php',
     'siswaAdmin'      => 'controller/admin/siswaController.php',
     'sekolahAdmin'    => 'controller/admin/sekolahController.php',
+    'quizAdmin'       => 'controller/admin/quizController.php', 
+    'pertanyaanAdmin' => 'controller/admin/pertanyaanController.php', 
+    'hasilQuizAdmin'  => 'controller/admin/hasilQuizController.php', 
     'logout'          => 'controller/logoutController.php',
-    'login'           => 'controller/siswa/loginController.php',
-    'register'        => 'controller/siswa/registerController.php',
-    'loginAdmin'      => 'controller/admin/loginController.php',
+    'login'           => 'controller/loginController.php',
+    'register'        => 'controller/registerController.php',
     'profil'          => 'controller/siswa/profilController.php',
-    'logout'          => 'controller/logoutController.php'
+    'kelompokKata'    => 'controller/siswa/kelompokKataController.php',
+    'kata'            => 'controller/siswa/kataController.php',
+    'quiz'            => 'controller/siswa/quizController.php'
 ];
 
 // cek apakah route ada

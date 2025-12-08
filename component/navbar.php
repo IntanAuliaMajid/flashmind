@@ -23,13 +23,10 @@
                     class="<?php echo ($active == 'home') 
                         ? 'border-b-2 border-blue-600 dark:border-indigo-400 font-semibold pb-1'
                         : 'hover:text-blue-600 dark:hover:text-indigo-400 transition-colors';?>">Home</a>
-                <a href="" class="<?php echo ($active == 'kelompokKata') 
+                <a href="?action=kelompokKata" class="<?php echo ($active == 'kelompokKata' || $active == 'kata') 
                         ? 'border-b-2 border-blue-600 dark:border-indigo-400 font-semibold pb-1'
                         : 'hover:text-blue-600 dark:hover:text-indigo-400 transition-colors';?>">Kelompok Kata</a>
-                <a href="" class="<?php echo ($active == 'kelompokKata') 
-                        ? 'border-b-2 border-blue-600 dark:border-indigo-400 font-semibold pb-1'
-                        : 'hover:text-blue-600 dark:hover:text-indigo-400 transition-colors';?>">Flashcard</a>
-                <a href="" class="<?php echo ($active == 'kelompokKata') 
+                <a href="?action=quiz" class="<?php echo ($active == 'quiz') 
                         ? 'border-b-2 border-blue-600 dark:border-indigo-400 font-semibold pb-1'
                         : 'hover:text-blue-600 dark:hover:text-indigo-400 transition-colors';?>">Quiz</a>
             </div>

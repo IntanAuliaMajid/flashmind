@@ -7,7 +7,10 @@ function index() {
 
     $id = $_SESSION['id_siswa'];
     $profil = getProfileById($id);
-
+    $statisticKata = getStatisticKataByDate($id);
+    $totalKata = getTotalKata($id);
+    $totalKelompok = getTotalKelompok($id);
+    
     include "view/siswa/profil.php";
 }
 

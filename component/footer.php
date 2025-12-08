@@ -15,7 +15,7 @@
                 <p class="text-gray-600 dark:text-gray-400 mb-4 max-w-md">
                     Platform pembelajaran interaktif yang membantu Anda menguasai materi dengan mudah melalui flashcard dan quiz yang menarik.
                 </p>
-                <div class="flex space-x-4">
+                <div class="flex space-x-4 dark:text-white">
                     <a href="#" class="social-link">
                         <i class="fab fa-facebook-f"></i>
                     </a>

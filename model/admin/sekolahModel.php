@@ -20,9 +20,11 @@ function getSekolahById($id) {
     return $data;
 }
 
-function storeSekolahModel($namaSekolah, $alamat) {
+// Perbaikan: Hapus parameter $alamat dan kolom 'alamat' dari query
+function storeSekolahModel($namaSekolah) {
     global $conn;
-    mysqli_query($conn, "INSERT INTO sekolah(nama_sekolah, alamat) VALUES('$namaSekolah')");
+    // Query disesuaikan dengan skema database yang hanya punya nama_sekolah
+    mysqli_query($conn, "INSERT INTO sekolah(nama_sekolah) VALUES('$namaSekolah')"); 
 }
 
 function updateSekolahModel($id, $namaSekolah) {
