@@ -11,3 +11,17 @@ function getWOD(){
     
     return null;
 }
+
+function getKelompok($id){
+    global $conn;
+    $query = "SELECT * FROM kelompok_kata WHERE user_id = $id";
+    $result = mysqli_query($conn, $query);
+
+    $data = [];
+    if ($result && mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $data[] = $row;
+        }
+    }
+    return $data;
+}

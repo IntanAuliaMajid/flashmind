@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Kelompok Kata</title>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {},
+            },
+        };
+    </script>
 </head>
 
 <body class="bg-gray-50 dark:bg-gray-900 min-h-full">
@@ -14,7 +22,7 @@
 <main class="w-full px-6 py-5 mt-20">
 
     <!-- HEADER + TOMBOL TAMBAH -->
-    <div class="flex justify-between items-center mb-6">
+    <div class="flex justify-between items-center mb-6 dark:text-white">
         <h1 class="text-3xl font-bold">Kelompok Kata Siswa</h1>
 
         <a href="index.php?action=kelompokKata&method=tambah"
@@ -32,7 +40,7 @@
         ?>
 
         <?php foreach($kelompok as $row): ?>
-            <div class="bg-white p-5 shadow rounded-lg">
+            <div class="bg-white p-5 shadow rounded-lg dark:bg-gray-800">
 
             <!-- Nama Kelompok -->
                 <h2 class="text-xl font-semibold mb-3">
@@ -57,6 +65,6 @@
     </div>
 
 </main>
-
+<?php include "component/footer.php"?>
 </body>
 </html>

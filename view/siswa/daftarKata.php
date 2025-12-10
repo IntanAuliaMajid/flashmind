@@ -7,7 +7,7 @@
 </head>
 <body class="bg-gray-50 dark:bg-gray-900 min-h-full">
 
-    <?php include "component/navbar.php"; ?>
+<?php include "component/navbar.php"; ?>
 
 <main class="w-full px-6 py-5 mt-20">
 
@@ -77,6 +77,6 @@
     <?php endif; ?>
 
 </main>
-
+<?php include "component/footer.php"?>
 </body>
 </html>

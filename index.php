@@ -1,7 +1,6 @@
 <?php
 
 // ambil action (controller)
-
 $action = $_GET['action'] ?? 'login';
 
 // ambil method (fungsi dalam controller)

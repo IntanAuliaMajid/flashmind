@@ -9,8 +9,6 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true || $_SESSI
 }
 
 function index() {
-    session_start();
-
     $id = $_SESSION['id_siswa'];
     $profil = getProfileById($id);
     $statisticKata = getStatisticKataByDate($id);

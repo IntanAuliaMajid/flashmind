@@ -40,23 +40,23 @@
                     <li>
                         <a href="?action=home" class="footer-link">
                             <i class="fas fa-home mr-2"></i>
-                            Beranda
+                            Home
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="footer-link">
+                        <a href="?action=kelompokKata" class="footer-link">
                             <i class="fas fa-layer-group mr-2"></i>
                             Kelompok Kata
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="footer-link">
+                        <a href="?action=kelompokKata" class="footer-link">
                             <i class="fas fa-clone mr-2"></i>
                             Flashcard
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="footer-link">
+                        <a href="?action=quiz" class="footer-link">
                             <i class="fas fa-question-circle mr-2"></i>
                             Quiz
                         </a>

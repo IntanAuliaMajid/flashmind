@@ -59,11 +59,10 @@
                 <p class="text-gray-600 dark:text-gray-300 text-base mb-6">
                     Buat kelompok kata kamu sendiri dan mulai hafalin materi tanpa ribet. Tinggal klik, buat, dan pakai!
                 </p>
-                <button 
-                    onclick="createNewGroup()"
+                <a href="?action=kelompokKata"
                     class="bg-indigo-600 dark:bg-indigo-500 text-white px-8 py-3 rounded-lg hover:bg-indigo-700 dark:hover:bg-indigo-600 transition">
                     Mulai Buat Kelompok
-                </button>
+                </a>
             </div>
 
             <!-- Image / Illustration -->
@@ -73,6 +72,44 @@
                     class="w-80 lg:w-96 drop-shadow-lg rounded-lg">
             </div>
         </section>
+        <!-- LIST KELOMPOK KATA -->
+        <section class="mt-10">
+            <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-5">
+                Kelompok Kata Saya
+            </h2>
+
+
+            <?php if (!empty($kelompokList)): ?>
+                <!-- GRID LIST -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <?php foreach ($kelompokList as $k): ?>
+                    <a href="index.php?action=kata&method=daftar&id=<?= $k['id_kelompok_kata'] ?>">
+                    <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6 rounded-xl shadow-sm hover:shadow-md transition cursor-pointer">
+                        
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                            <?= htmlspecialchars($k['nama_kelompok_kata']); ?>
+                        </h3>
+
+                    </div>
+                    <?php endforeach; ?>
+                    </a>
+
+                </div>
+
+            <?php else: ?>
+                <div class="text-center bg-gray-100 dark:bg-gray-800 p-6 rounded-xl border border-gray-300 dark:border-gray-700 mt-6">
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Kamu belum membuat kelompok kata.
+                    </p>
+                    <a href="?action=kelompokKata"
+                    class="inline-block mt-4 bg-indigo-600 dark:bg-indigo-500 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 dark:hover:bg-indigo-600 transition">
+                        Buat Sekarang
+                    </a>
+                </div>
+            <?php endif; ?>
+        </section>
+
         </main>
         <?php include "component/footer.php"?>
 </body>

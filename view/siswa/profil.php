@@ -65,7 +65,7 @@
 <?php include "component/navbar.php"; ?>
 
 <!-- MAIN CONTENT -->
-<main class="w-full mx-auto px-4 py-10 mt-20">
+<main class="w-full mx-auto px-4  mt-20">
     <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">Profil Saya</h1>
 
     <div class="bg-white dark:bg-gray-800 shadow-md rounded-xl p-8 border border-gray-200 dark:border-gray-700">
@@ -126,7 +126,7 @@
                     <label class="text-gray-700 dark:text-gray-300 text-sm">Sekolah</label>
                     <input type="text" name="sekolah" value="<?= $_SESSION['sekolah']; ?>"
                         class="w-full mt-1 p-2 rounded-lg border border-gray-300 dark:border-gray-600 
-                               bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100">
+                               bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100" readonly>
                 </div>
 
                 <button type="submit"

@@ -18,7 +18,7 @@ function getAllSchool(){
     return $result;
 }
 #creat
-function register($username, $nama, $password, $konfirmasipassword,$sekolah_id){
+function register($username, $nama, $password,$sekolah_id){
     global $conn;
     
     $sql = "INSERT INTO siswa (username, nama, password, sekolah_id) values ('$username', '$nama', '$password', $sekolah_id)";
