@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Akun</title>
+    <title>Create Account</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -20,10 +20,10 @@
     <!-- FULLSCREEN BLUR -->
     <div class="absolute inset-0 backdrop-blur-md bg-black/20 z-10"></div>
 
-    <!-- CARD DI ATAS BLUR -->
+    <!-- CARD -->
     <div class="w-full max-w-md bg-white p-8 rounded-xl shadow-lg relative z-20">
 
-        <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Daftar Akun</h2>
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Create Account</h2>
 
         <?php if (isset($error)) : ?>
             <div class="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
@@ -38,31 +38,31 @@
                 <input 
                     type="text" 
                     name="username" 
-                    placeholder="Masukkan Username"
+                    placeholder="Enter Username"
                     value="<?php echo isset($username) ? htmlspecialchars($username) : ''; ?>"
                     required
                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
                 >
-                <small class="text-gray-500">3+ karakter, huruf, angka, underscore</small>
+                <small class="text-gray-500">3+ characters, letters, numbers, underscore</small>
             </div>
 
             <div class="mb-4">
                 <input 
                     type="text" 
                     name="nama" 
-                    placeholder="Masukkan Nama" 
+                    placeholder="Enter Full Name" 
                     value="<?php echo isset($nama) ? htmlspecialchars($nama) : ''; ?>"
                     required
                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
                 >
-                <small class="text-gray-500">Minimal 3 karakter</small>
+                <small class="text-gray-500">Minimum 3 characters</small>
             </div>
 
             <div class="mb-4">
                 <input 
                     type="password" 
                     name="password" 
-                    placeholder="Masukkan Password"
+                    placeholder="Enter Password"
                     required
                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
                 >
@@ -72,7 +72,7 @@
                 <input 
                     type="password" 
                     name="password2" 
-                    placeholder="Konfirmasi Password"
+                    placeholder="Confirm Password"
                     required
                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
                 >
@@ -84,7 +84,7 @@
                     required
                     class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-blue-500"
                 >
-                    <option value="">-- Pilih Sekolah --</option>
+                    <option value="">-- Select School --</option>
                     <?php foreach ($sekolah as $row) : ?>
                         <option 
                             value="<?= $row['id_sekolah'] ?>"
@@ -100,15 +100,15 @@
                 type="submit" 
                 class="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold text-lg hover:bg-blue-600 transition shadow-md"
             >
-                Daftar
+                Register
             </button>
         </form>
 
         <div class="text-center mt-6 text-gray-600">
             <p class="text-sm">
-                Sudah punya akun?
+                Already have an account?
                 <a href="?action=login" class="text-blue-600 hover:text-blue-700 font-medium hover:underline">
-                    Login di sini
+                    Login here
                 </a>
             </p>
         </div>

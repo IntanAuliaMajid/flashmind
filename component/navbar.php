@@ -25,7 +25,7 @@
                         : 'hover:text-blue-600 dark:hover:text-indigo-400 transition-colors';?>">Home</a>
                 <a href="?action=kelompokKata" class="<?php echo ($active == 'kelompokKata' || $active == 'kata') 
                         ? 'border-b-2 border-blue-600 dark:border-indigo-400 font-semibold pb-1'
-                        : 'hover:text-blue-600 dark:hover:text-indigo-400 transition-colors';?>">Kelompok Kata</a>
+                        : 'hover:text-blue-600 dark:hover:text-indigo-400 transition-colors';?>">Word Group</a>
                 <a href="?action=quiz" class="<?php echo ($active == 'quiz') 
                         ? 'border-b-2 border-blue-600 dark:border-indigo-400 font-semibold pb-1'
                         : 'hover:text-blue-600 dark:hover:text-indigo-400 transition-colors';?>">Quiz</a>
@@ -76,7 +76,7 @@
                         <a href="?action=profil"
                            class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 
                                   hover:bg-gray-100 dark:hover:bg-gray-700">
-                            Profil Saya
+                            My Profile
                         </a>
 
                         <a href="?action=logout"

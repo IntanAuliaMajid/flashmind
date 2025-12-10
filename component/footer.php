@@ -13,7 +13,7 @@
                     </span>
                 </div>
                 <p class="text-gray-600 dark:text-gray-400 mb-4 max-w-md">
-                    Platform pembelajaran interaktif yang membantu Anda menguasai materi dengan mudah melalui flashcard dan quiz yang menarik.
+                    An interactive learning platform that helps you master material easily through engaging flashcards and quizzes.
                 </p>
                 <div class="flex space-x-4 dark:text-white">
                     <a href="#" class="social-link">
@@ -34,7 +34,7 @@
             <!-- Quick Links -->
             <div>
                 <h3 class="text-sm font-semibold text-gray-900 dark:text-gray-100 uppercase tracking-wider mb-4">
-                    Menu Utama
+                    Main Menu
                 </h3>
                 <ul class="space-y-3 dark:text-white">
                     <li>
@@ -46,13 +46,13 @@
                     <li>
                         <a href="?action=kelompokKata" class="footer-link">
                             <i class="fas fa-layer-group mr-2"></i>
-                            Kelompok Kata
+                            Word Groups
                         </a>
                     </li>
                     <li>
                         <a href="?action=kelompokKata" class="footer-link">
                             <i class="fas fa-clone mr-2"></i>
-                            Flashcard
+                            Flashcards
                         </a>
                     </li>
                     <li>
@@ -67,25 +67,25 @@
             <!-- Account Links -->
             <div>
                 <h3 class="text-sm font-semibold text-gray-900 dark:text-gray-100 uppercase tracking-wider mb-4">
-                    Akun
+                    Account
                 </h3>
                 <ul class="space-y-3 dark:text-white">
                     <li>
                         <a href="?action=profil" class="footer-link">
                             <i class="fas fa-user mr-2"></i>
-                            Profil Saya
+                            My Profile
                         </a>
                     </li>
                     <li>
                         <a href="#" class="footer-link">
                             <i class="fas fa-cog mr-2"></i>
-                            Pengaturan
+                            Settings
                         </a>
                     </li>
                     <li>
                         <a href="#" class="footer-link">
                             <i class="fas fa-question mr-2"></i>
-                            Bantuan
+                            Help
                         </a>
                     </li>
                     <li>
@@ -109,13 +109,13 @@
                 
                 <div class="flex items-center space-x-6 text-sm">
                     <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        Kebijakan Privasi
+                        Privacy Policy
                     </a>
                     <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        Syarat & Ketentuan
+                        Terms & Conditions
                     </a>
                     <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                        Kontak
+                        Contact
                     </a>
                 </div>
             </div>
